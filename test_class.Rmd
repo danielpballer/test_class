@@ -1,0 +1,96 @@
+---
+title: "Test Class"
+author: "MAJ Daniel Baller"
+date: "11/19/2021"
+output: 
+  html_document:
+    code_folding: hide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+	echo = TRUE,
+	message = FALSE,
+	warning = FALSE
+)
+```
+
+# Organization
+
+```{=html}
+<!--
+## subheader
+-->
+```
+### subsubheader
+
+###### subest of headers
+
+------------------------------------------------------------------------
+
+# Text format
+
+*Italic*
+
+**Bold**
+
+--strikethrough--
+
+superscript^2^
+
+[google](https://google.com)
+
+[Underline]{.ul}
+
+$\underline{\text{Underline}}$
+
+the formula is $y = mx + b^2$. thats so cool
+
+look at the below formula $$y = mx+b^2$$
+
+# Lists
+
+## unordered lists
+
+-   item 1
+
+-   item 2
+
+    -   sub item 1
+
+## ordered lists
+
+1.  item 1
+2.  item 2
+
+-   subitem 1
+
++------------------------+----------------------+----------------------+
+| Col1                   | Col2                 | Col3                 |
++========================+:====================:+======================+
+| value 1                | afdasfa              |                      |
++------------------------+----------------------+----------------------+
+| value 2                | asdfdsa              |                      |
++------------------------+----------------------+----------------------+
+|                        | agda                 |                      |
++------------------------+----------------------+----------------------+
+
+: this is the best table ever
+
+# Tables
+
+| Column 1 | Column 2 |
+|---------:|:--------:|
+|  value 1 |  value2  |
+
+```{r}
+library(palmerpenguins)
+library(tidyverse)
+# loading packages
+
+data("penguins")
+
+penguins %>% ggplot(aes(x = flipper_length_mm))+geom_histogram()
+```
+
+bla bla bla histogram 
